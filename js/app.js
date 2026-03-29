@@ -10,7 +10,6 @@
  * Author URI: https://themeforest.net/user/mix_design
  * File name: app.js
  * ------------------------------------------------
-
  * ------------------------------------------------
  * Table of Contents
  * ------------------------------------------------
@@ -216,6 +215,13 @@ function mxdPageTransition() {
   });
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute("href");
+    const fancy = link.getAttribute("data-type");
+   
+    if(fancy){
+
+      console.log( 'return link', link, fancy);
+      return;
+    }
     if (
       !href ||
       href.startsWith("#") ||
@@ -223,7 +229,9 @@ function mxdPageTransition() {
       href.startsWith("tel") ||
       link.target === "_blank" ||
       link.hasAttribute("download")
-    ) return;
+    ) {
+      return;
+    };
 
     link.addEventListener("click", (e) => {
       const targetUrl = link.href;
@@ -3181,10 +3189,13 @@ function mxdColorSwitcher() {
     }
   }
   function getCurrentTheme(){
+    /*
     let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     // localStorage.getItem('template.theme') ? theme = localStorage.getItem('template.theme') : null;
     const storedTheme = mxdSafeLocalGet('template.theme');
     if (storedTheme) theme = storedTheme;
+    */
+   let theme = 'dark';
     return theme;
   }
   function loadTheme(theme){

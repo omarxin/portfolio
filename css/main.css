@@ -2212,7 +2212,7 @@ html.lenis, html.lenis body {
 }
 @media only screen and (min-width: 992px) {
   .fullwidth-text__content {
-    font-size: 28cqw;
+    font-size: 23cqw;
   }
   .fullwidth-text__content.small {
     font-size: 10.46cqw;
@@ -6283,7 +6283,7 @@ form textarea:required:valid {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 28cqw;
+  font-size: 25cqw;
   line-height: 0.746;
 }
 .fw-mark__content span {
@@ -6315,7 +6315,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 992px) {
   .fw-mark__content {
-    font-size: 28cqw;
+    font-size: 25cqw;
   }
 }
 
@@ -20902,3 +20902,41 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Block - Images Grid End */
 /* ------------------------------------------------*/
+.f-html h1,
+.f-html h2,
+.f-html h3,
+.f-html h4,
+.f-html h5,
+.f-html h6,
+.f-html p,
+.f-html span {
+  color: #000 !important;
+}
+.f-html img {
+  box-sizing: content-box;
+  max-width: 100%;
+  height: auto;
+}
+
+#dialog-content {
+display: none;
+width: min(1000px, 90vw);
+}
+
+.mymodal-scroll {
+width: 100%;
+max-height: 80vh;
+overflow-y: auto;
+overflow-x: hidden;
+-webkit-overflow-scrolling: touch;
+padding: 24px;
+box-sizing: border-box;
+}
+
+.fancybox__slide .f-html {
+max-height: 85vh;
+overflow: hidden;
+}
+.text-center {
+  text-align: center;
+}
